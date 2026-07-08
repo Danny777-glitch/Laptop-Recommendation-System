@@ -1,386 +1,202 @@
-\# 💻 LapWise AI
+# 💻 Laptop Recommendation System
 
-\### \*Predict. Compare. Recommend.\*
+### *Predict Performance. Recommend Smarter.*
 
+An end-to-end Machine Learning web application that predicts laptop performance using **XGBoost Regressor** and recommends the most suitable laptops based on user hardware requirements.
 
+---
 
-An end-to-end Artificial Intelligence web application that utilizes an \*\*Artificial Neural Network (ANN)\*\* built with \*\*PyTorch\*\* to predict laptop performance and recommend the most suitable laptops based on user preferences, budget, and computing requirements.
+# 📌 Project Overview
 
+Choosing a laptop can be difficult because of the huge variety of processors, graphics cards, RAM capacities, storage options, and display configurations available today.
 
+This project simplifies that decision by predicting a laptop's **Performance Score** using an **XGBoost Regression model** trained on engineered hardware features. Based on the predicted score, the system recommends the closest matching laptops through an interactive **Streamlit** web application.
 
-\---
+---
 
+# 🎯 Project Objectives
 
+- Build an XGBoost Regression model to predict laptop performance.
+- Perform complete data cleaning and feature engineering.
+- Create an intelligent recommendation engine.
+- Develop an interactive Streamlit web application.
+- Demonstrate an end-to-end Machine Learning workflow.
 
-\# 📌 Project Overview
+---
 
+# 🚀 Features
 
+## 🤖 Performance Prediction
 
-Choosing the right laptop has become increasingly difficult due to the wide variety of processors, graphics cards, memory configurations, and pricing options available in today's market. Comparing these specifications manually can be confusing, especially for students, developers, gamers, and content creators.
+- Predicts laptop performance using XGBoost.
 
+## 💻 Smart Recommendation Engine
 
+- Recommends the Top 3 laptops closest to the predicted performance.
 
-\*\*LapWise AI\*\* simplifies this process by analyzing laptop hardware specifications and predicting an overall \*\*Performance Score\*\* using a PyTorch-based Artificial Neural Network. Based on the predicted score and user-defined requirements, the system recommends laptops that best match the user's needs through an interactive Streamlit web application.
+## 📊 Interactive Web Interface
 
+- Clean Streamlit UI for selecting hardware preferences.
 
+## 🧹 Data Preprocessing
 
-\---
+- Missing value handling
+- Feature extraction
+- Feature encoding
+- Performance score generation
 
+## ⚡ Fast XGBoost Model
 
+- Accurate regression model
+- Low prediction latency
 
-\# 🎯 Project Objectives
+---
 
+# 🛠 Technology Stack
 
-
-\- Develop an Artificial Neural Network (ANN) using PyTorch to predict laptop performance.
-
-\- Build an intelligent recommendation engine based on user preferences.
-
-\- Perform complete data preprocessing and feature engineering.
-
-\- Deploy an interactive web application using Streamlit.
-
-\- Demonstrate a complete end-to-end AI/ML workflow from data collection to deployment.
-
-
-
-\---
-
-
-
-\# 🚀 Key Features
-
-
-
-\- 🤖 \*\*Performance Prediction\*\*
-
-&#x20; - Predicts an overall laptop performance score using a trained ANN model.
-
-
-
-\- 💻 \*\*Smart Laptop Recommendation\*\*
-
-&#x20; - Suggests the most suitable laptops based on budget, usage, and predicted performance.
-
-
-
-\- 📊 \*\*Interactive Dashboard\*\*
-
-&#x20; - Displays hardware comparisons, price analysis, and performance insights.
-
-
-
-\- 🧹 \*\*Data Preprocessing\*\*
-
-&#x20; - Handles missing values, duplicate records, feature encoding, and feature scaling.
-
-
-
-\- ⚡ \*\*PyTorch Deep Learning Model\*\*
-
-&#x20; - Multi-Layer Perceptron (ANN) trained using PyTorch.
-
-
-
-\- 🌐 \*\*Modern Web Interface\*\*
-
-&#x20; - User-friendly Streamlit application with an intuitive interface.
-
-
-
-\---
-
-
-
-\# 🛠 Technology Stack
-
-
-
-| Category | Technologies |
-
-|-----------|--------------|
-
+| Category | Technology |
+|----------|------------|
 | Programming Language | Python |
-
-| Deep Learning | PyTorch |
-
-| Machine Learning | Scikit-learn |
-
+| Machine Learning | XGBoost |
 | Data Processing | Pandas, NumPy |
-
-| Data Visualization | Plotly, Matplotlib |
-
 | Model Serialization | Joblib |
-
 | Web Framework | Streamlit |
+| Visualization | Matplotlib |
 
+---
 
-
-\---
-
-
-
-\# 📂 Repository Structure
-
-
+# 📂 Repository Structure
 
 ```text
-
-LapWise-AI/
-
-│
-
-├── dataset/
-
-│   ├── laptops\_raw.csv
-
-│   ├── laptops\_dirty.csv
-
-│   └── laptops\_clean.csv
+Laptop-Recommendation-System/
 
 │
-
+├── datasets/
+│   ├── laptops_raw.csv
+│   ├── laptops_clean.csv
+│   └── laptops_Featured.csv
+│
 ├── notebooks/
-
-│   ├── 01\_Data\_Collection.ipynb
-
-│   ├── 02\_Data\_Preprocessing.ipynb
-
-│   ├── 03\_EDA.ipynb
-
-│   ├── 04\_Model\_Training.ipynb
-
-│   └── 05\_Recommendation\_System.ipynb
-
+│   ├── 01_Data_Collection.ipynb
+│   ├── 02_Data_Preprocessing.ipynb
+│   ├── 03_Feature_Engineering.ipynb
+│   ├── 04_Model_Training.ipynb
+│   └── 05_Recommendation_Engine.ipynb
 │
-
 ├── models/
-
-│   ├── ann\_model.pth
-
-│   └── scaler.joblib
-
+│   └── model_artifacts.joblib
 │
-
-├── app/
-
-│   └── app.py
-
-│
-
-├── images/
-
-│
-
+├── app.py
 ├── requirements.txt
-
+├── README.md
 │
-
-└── README.md
-
+└── images/
 ```
 
+---
 
+# 📊 Dataset Features
 
-\---
+The dataset contains real-world laptop specifications.
 
+### Features
 
+- Brand
+- Product Name
+- Processor
+- GPU
+- RAM
+- Storage
+- Display Resolution
+- Refresh Rate
+- Price
 
-\# 📊 Dataset
+### Engineered Features
 
+- CPU Score
+- GPU Score
+- RAM (GB)
+- Storage (GB)
+- Refresh Rate (Hz)
+- Resolution Score
+- Performance Score
 
+---
 
-The project uses a publicly available laptop dataset containing real-world laptop specifications from multiple manufacturers.
+# 🤖 Machine Learning Pipeline
 
-
-
-\### Dataset Features
-
-
-
-\- Brand
-
-\- Product Name
-
-\- Processor
-
-\- Graphics Card (GPU)
-
-\- RAM
-
-\- Storage
-
-\- Display Size
-
-\- Display Resolution
-
-\- Refresh Rate
-
-\- Battery
-
-\- Weight
-
-\- Operating System
-
-\- Price
-
-
-
-\---
-
-
-
-\# 🤖 Machine Learning Pipeline
-
-
-
-```
-
+```text
 Laptop Dataset
-
-&#x20;       │
-
-&#x20;       ▼
-
+        │
+        ▼
 Data Cleaning
-
-&#x20;       │
-
-&#x20;       ▼
-
+        │
+        ▼
 Feature Engineering
-
-&#x20;       │
-
-&#x20;       ▼
-
-Encoding \& Feature Scaling
-
-&#x20;       │
-
-&#x20;       ▼
-
-PyTorch ANN Model
-
-&#x20;       │
-
-&#x20;       ▼
-
+        │
+        ▼
+Feature Encoding
+        │
+        ▼
+XGBoost Regressor
+        │
+        ▼
 Performance Score Prediction
-
-&#x20;       │
-
-&#x20;       ▼
-
+        │
+        ▼
 Recommendation Engine
-
-&#x20;       │
-
-&#x20;       ▼
-
+        │
+        ▼
 Streamlit Web Application
-
 ```
 
+---
 
+# 📈 Application Workflow
 
-\---
+```text
+User Inputs Hardware Requirements
+        │
+        ▼
+XGBoost Predicts Performance Score
+        │
+        ▼
+Recommendation Engine Finds Closest Match
+        │
+        ▼
+Top 3 Laptop Recommendations
+```
 
+---
 
+# 🖥 Application Features
 
-\# 📈 Expected Output
+- Performance Prediction
+- Laptop Recommendation
+- Hardware Preference Selection
+- Interactive Streamlit Dashboard
 
+---
 
+# 🔮 Future Improvements
 
-The trained ANN predicts an overall laptop performance score based on hardware specifications.
+- Laptop Images
+- Live Price Tracking
+- Benchmark Integration
+- Price Filters
+- Brand Filters
+- Personalized Recommendations
 
+---
 
+# 👨‍💻 Developed By
 
-The recommendation engine then filters laptops according to:
+**Daniel**
 
+Artificial Intelligence & Machine Learning Student
 
+---
 
-\- Budget
+# ⭐ Project Status
 
-\- Intended Usage
-
-\- Performance Score
-
-\- Hardware Requirements
-
-
-
-Finally, the application recommends the most suitable laptops ranked by predicted performance.
-
-
-
-\---
-
-
-
-\# 🖥 Application Modules
-
-
-
-\- Home
-
-\- Performance Prediction
-
-\- Laptop Recommendation
-
-\- Laptop Comparison
-
-\- Data Analytics Dashboard
-
-\- About Project
-
-
-
-\---
-
-
-
-\# 🔮 Future Enhancements
-
-
-
-\- Live laptop price integration
-
-\- Online benchmark score integration
-
-\- Personalized recommendation system
-
-\- User authentication
-
-\- Cloud deployment
-
-\- Mobile responsive interface
-
-
-
-\---
-
-
-
-\# 👨‍💻 Developed By
-
-
-
-\*\*Daniel\*\*
-
-
-
-Artificial Intelligence \& Machine Learning Student
-
-
-
-\---
-
-
-
-\# ⭐ Project Status
-
-
-
-🚧 Currently under development.
-
+✅ Completed
