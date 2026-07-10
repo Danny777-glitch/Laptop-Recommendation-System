@@ -193,7 +193,7 @@ Top 3 Laptop Recommendations
 
 **Daniel**
 
-Artificial Intelligence & Machine Learning Student
+
 
 ---
 
